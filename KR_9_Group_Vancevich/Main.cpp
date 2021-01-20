@@ -3,6 +3,7 @@
 #include <string>
 #include "List.h"
 #include "Functions.h"
+#include "CClientsFileReader.h"
 
 using namespace std;
 
@@ -10,6 +11,26 @@ using namespace std;
 
 
 int main(){
+	cout << "Please enter file name:";
+	std::string file;
+	cin >> file;
+	
+	
+	CClientsFileReader* pReader = new CClientsFileReader(file);
+	CClient* pClients = nullptr;
+	int iClientSize = 99;
+	CUseStatistics* pStats = nullptr;
+	if (!pReader->Read(&pClients, &pStats, iClientSize))
+	{
+		cout << "Cannot read file. Check the file exists or you have access rights.";
+		std::cin.get();
+		return 0;
+	}
+
+
+	
+
+	///////////////////////////////////////
 	setlocale(LC_ALL, "Russian");
 	ifstream InputC("Client.txt");
 	List<string> Client;

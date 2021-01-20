@@ -139,10 +139,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CClient.cpp" />
+    <ClCompile Include="CClientsFileReader.cpp" />
+    <ClCompile Include="CPlan.cpp" />
+    <ClCompile Include="CUseStatistics.cpp" />
     <ClCompile Include="Functions.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CClient.h" />
+    <ClInclude Include="CClientsFileReader.h" />
+    <ClInclude Include="CPlan.h" />
+    <ClInclude Include="CUseStatistics.h" />
     <ClInclude Include="Functions.h" />
     <ClInclude Include="List.h" />
   </ItemGroup>
